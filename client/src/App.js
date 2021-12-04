@@ -7,13 +7,21 @@ import "./index.css"
 
 
 function App() {
-  let usersData = require('./users.json')
+  let users = require('./users.json')
 
 
   return (
     <>
-      <NavBar />
-      <UsersCard users={usersData}/>
+    <NavBar />
+
+    <div className='profile-list-container'>
+      {users?.map((user, index) => (
+        <div key={index}>
+          <UsersCard user={user}/>
+        </div>
+      ))}
+    </div>
+
     </>
   );
 }
