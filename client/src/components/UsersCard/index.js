@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 
 
-function UsersCard({user}) {
+
+function UsersCard({user, index}) {
     const [showContent, setShowContent] = useState(false)
 
     const showMoreContent = () => {
@@ -9,19 +10,22 @@ function UsersCard({user}) {
     }
 
     return (
-        <div className='profile-container'>
+        <div className='profile-container' key={index}>
+
             <div className='profile-img'>
                 <i className="fas fa-user-alt"></i>
             </div>
 
             <div className='profile-content'>
-                <p>{user.firstName} {user.lastName}</p>
-                <p>{user.role}</p>
-                <p>{user.email}</p>
+                <div className='profile-header'>
+                    <h1 className='user-name'>{user.firstName} {user.lastName}</h1>
+                    <p className='user-role'>{user.role}</p>
+                    <p className='user-email'>{user.email}</p>
+                </div>
 
                 {showContent ?
                     <div className='content-details'>
-                        <p>{user.street},{user.city},{user.state} {user.zip}</p>
+                        <p>{user.street}, {user.city}, {user.state} {user.zip}</p>
                         <p>{user.phone}</p>
                         <p>{user.createdAt}</p>
                         <p>{user.lastLoggedIn}</p>
