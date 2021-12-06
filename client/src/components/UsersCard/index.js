@@ -9,11 +9,27 @@ function UsersCard({user, index}) {
         !showContent ? setShowContent(true) : setShowContent(false)
     }
 
+    const changeAvatarColor = () =>  {
+        let color = ""
+
+        if (user.id === 0 || user.id === 1) color = "#2081C3"
+        else if (user.id === 2) color = "#6BAAAB"
+        else if (user.id === 3 || user.id === 4) color = "#7E7E7E"
+
+        return color
+    }
+
+    const formatPhoneNumber = (phoneNumber) => {
+        if (typeof(input) !== 'string') phoneNumber = phoneNumber.toString()
+        return "("+phoneNumber.substring(0,3)+")"+phoneNumber.substring(3,6)+"-"+phoneNumber.substring(6,11)
+    }
+
+
     return (
         <div className='profile-container' key={index}>
 
             <div className='profile-img'>
-                <i className="fas fa-user-alt"></i>
+                <i className="fas fa-user-alt" style={{color:changeAvatarColor()}}></i>
             </div>
 
             <div className='profile-content'>
@@ -24,16 +40,28 @@ function UsersCard({user, index}) {
                 </div>
 
                 {showContent ?
-                    <div className='content-details'>
-                        <p>{user.street}, {user.city}, {user.state} {user.zip}</p>
-                        <p>{user.phone}</p>
-                        <p>{user.createdAt}</p>
-                        <p>{user.lastLoggedIn}</p>
+                    <div className='content-details-container'>
+                        <div className='content-details'>
+                            <h1>Address</h1>
+                            <p>{user.street}, {user.city}, {user.state} {user.zip}</p>
+                        </div>
+                        <div className='content-details'>
+                            <h1>Phone</h1>
+                            <p>{formatPhoneNumber(user.phone)}</p>
+                        </div>
+                        <div className='content-details'>
+                            <h1>Created At</h1>
+                            <p>{user.createdAt}</p>
+                        </div>
+                        <div className='content-details'>
+                            <h1>Last Loggined In</h1>
+                            <p>{user.lastLoggedIn}</p>
+                        </div>
                     </div>
                 : ""}
             </div>
 
-            <div className='profile-show-content'>
+            <div className='profile-show-content-icons'>
                 {!showContent ?
                     <i onClick={showMoreContent} className="fas fa-angle-down"></i>
                     :

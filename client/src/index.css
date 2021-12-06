@@ -2,10 +2,7 @@ body, p, h1, h2, h3, h4{
     margin: 0;
     padding: 0;
     border: 0;
-}
 
-button, i {
-    cursor: pointer;
 }
 
 .whole-page {
@@ -26,22 +23,28 @@ button, i {
     background-color: white;
     height: auto;
     margin-top: 16px;
-    box-shadow: 0px 1px 5px rgb(221, 221, 221);
-    margin: 15px;
-}
-
-.profile-header{
-    height: 80px;
+    box-shadow: 0px 1px 5px rgb(141, 141, 141);
+    margin: 16px;
 }
 
 .profile-content {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.profile-header{
+    display: flex;
+    flex-direction: column;
+    height: 80px;
     font-family: Open Sans;
-    height: auto;
+    box-sizing: border-box;
+    padding-top: 20px;
+
 }
 
 .profile-header .user-name {
     font-size: 12px;
-    font-weight: Semi-bold;
+    font-weight: 600;
     color: #4A4A4A
 }
 
@@ -55,6 +58,39 @@ button, i {
     color: #7E7E7E
 }
 
-.content-details {
+.content-details-container {
     height: 190px;
+}
+
+.content-details h1 {
+   font-size: 10px;
+   font-weight: 600;
+   color: #4A4A4A;
+   margin-top: 1.5em;
+}
+
+.content-details p {
+    font-size: 10px;
+    color: #4A4A4A;
+
+}
+
+.profile-show-content-icons {
+    display: flex;
+    justify-content: center;
+}
+
+/* ICONS */
+.fas.fa-user-alt {
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.fas.fa-angle-down, .fas.fa-angle-up {
+    font-size: 23px;
+    cursor: pointer;
+    color: #7E7E7E;
+    padding-top: 20px;
 }
