@@ -2,15 +2,12 @@
 import React from 'react';
 import NavBar from './components/NavBar';
 import UsersCard from './components/UsersCard';
-import { useState } from 'react';
 
 import "./index.css"
 
 
 function App() {
   let users = require('./users.json')
-
-
 
   return (
     <div className='whole-page'>

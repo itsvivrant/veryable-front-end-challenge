@@ -3,6 +3,8 @@ import React, {useState} from 'react';
 
 
 function UsersCard({user, index}) {
+    const dayjs = require('dayjs')
+
     const [showContent, setShowContent] = useState(false)
 
     const showMoreContent = () => {
@@ -22,6 +24,10 @@ function UsersCard({user, index}) {
     const formatPhoneNumber = (phoneNumber) => {
         if (typeof(input) !== 'string') phoneNumber = phoneNumber.toString()
         return "("+phoneNumber.substring(0,3)+")"+phoneNumber.substring(3,6)+"-"+phoneNumber.substring(6,11)
+    }
+
+    const formatTimeZone = (time) => {
+        return dayjs(time).format("MM/DD/YY h:mm A")
     }
 
 
@@ -51,11 +57,11 @@ function UsersCard({user, index}) {
                         </div>
                         <div className='content-details'>
                             <h1>Created At</h1>
-                            <p>{user.createdAt}</p>
+                            <p>{formatTimeZone(user.createdAt)}</p>
                         </div>
                         <div className='content-details'>
                             <h1>Last Loggined In</h1>
-                            <p>{user.lastLoggedIn}</p>
+                            <p>{formatTimeZone(user.lastLoggedIn)}</p>
                         </div>
                     </div>
                 : ""}
