@@ -13,16 +13,16 @@ function UsersCard({user, index}) {
     const changeAvatarColor = () =>  {
         let color = ""
 
-        if (user.id === 0 || user.id === 1) color = "#2081C3"
-        else if (user.id === 2) color = "#6BAAAB"
-        else if (user.id === 3 || user.id === 4) color = "#7E7E7E"
+        if (user.role === "Administrator") color = "#2081C3"
+        else if (user.role === "User") color = "#6BAAAB"
+        else if (user.role === "Viewer") color = "#7E7E7E"
 
         return color
     }
 
     const formatPhoneNumber = (phoneNumber) => {
         if (typeof(input) !== 'string') phoneNumber = phoneNumber.toString()
-        return "("+phoneNumber.substring(0,3)+")"+phoneNumber.substring(3,6)+"-"+phoneNumber.substring(6,11)
+        return "(" + phoneNumber.substring(0,3) + ") " + phoneNumber.substring(3,6) + " - " + phoneNumber.substring(6,11)
     }
 
     const formatTimeZone = (time) => {
