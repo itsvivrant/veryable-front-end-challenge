@@ -2,6 +2,7 @@ body, p, h1, h2, h3, h4{
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: "Open Sans";
 
 }
 
@@ -36,25 +37,24 @@ body, p, h1, h2, h3, h4{
     display: flex;
     flex-direction: column;
     height: 80px;
-    font-family: Open Sans;
     box-sizing: border-box;
-    padding-top: 20px;
+    padding-top: 15px;
 
 }
 
 .profile-header .user-name {
-    font-size: 12px;
+    font-size: 17px;
     font-weight: 600;
     color: #4A4A4A
 }
 
 .profile-header .user-role {
-    font-size: 10px;
+    font-size: 13px;
     color: #4A4A4A
 }
 
 .profile-header .user-email {
-    font-size: 10px;
+    font-size: 13px;
     color: #7E7E7E
 }
 
@@ -63,14 +63,14 @@ body, p, h1, h2, h3, h4{
 }
 
 .content-details h1 {
-   font-size: 10px;
+   font-size: 13px;
    font-weight: 600;
    color: #4A4A4A;
-   margin-top: 1.5em;
+   margin-top: 1em;
 }
 
 .content-details p {
-    font-size: 10px;
+    font-size: 13px;
     color: #4A4A4A;
 
 }
@@ -82,7 +82,7 @@ body, p, h1, h2, h3, h4{
 
 /* ICONS */
 .fas.fa-user-alt {
-    font-size: 35px;
+    font-size: 40px;
     display: flex;
     justify-content: center;
     padding-top: 20px;

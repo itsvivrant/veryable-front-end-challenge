@@ -9,11 +9,12 @@
 
 .fas.fa-user-friends {
     color: #2081C3;
-    font-size: 18px;
+    font-size: 30px;
     margin-right: .5%;
 }
 
-.nav-box h1 {
-     font-size: 18px;
-     color: #4A4A4A
+.nav-box p {
+     font-size: 30px;
+     color: #4A4A4A;
+     font-weight: 600;
 }
