@@ -1,0 +1,19 @@
+.nav-box {
+    background-color: white;
+    height: 64px;
+    box-shadow: 0px 1px 5px rgb(141, 141, 141);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fas.fa-user-friends {
+    color: #2081C3;
+    font-size: 18px;
+    margin-right: .5%;
+}
+
+.nav-box h1 {
+     font-size: 18px;
+     color: #4A4A4A
+}

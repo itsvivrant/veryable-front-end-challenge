@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 
 
-
 function UsersCard({user, index}) {
     const dayjs = require('dayjs')
 

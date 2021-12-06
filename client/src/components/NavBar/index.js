@@ -2,7 +2,11 @@ import "./index.css"
 
 function NavBar() {
     return (
-        <h1>This is nav</h1>
+        <div className='nav-box'>
+            <i className="fas fa-user-friends"></i>
+            <h1>USERS</h1>
+        </div>
+
     )
 
 }
